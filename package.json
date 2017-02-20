@@ -4,7 +4,7 @@
   "description": "API tests for Taxamo Transaction API",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dwyl/learn-nightwatch.git"
+    "url": "git+https://github.com/DanweR/taxamo.git"
   },
   "main": "index.js",
   "dependencies": {
