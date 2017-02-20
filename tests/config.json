@@ -1,0 +1,38 @@
+{
+  "APP_URL" : "https://api.taxamo.com",
+  "TRANSACTION_API": "/api/v1/transactions",
+  "STORE_TRANSACTION_API": "/api/v1/transactions",
+  "RETRIEVE_TRANSACTION_API": "/api/v1/transactions/{key}",
+  "UPDATE_TRANSACTION_API": "/api/v1/transactions/{key}",
+  "DELETE_TRANSACTION_API": "/api/v1/transactions/{key}",
+  "CONFIRM_TRANSACTION_API": "/api/v1/transactions/{key}/confirm",
+  "UNCONFIRM_TRANSACTION_API": "/api/v1/transactions/{key}/unconfirm",
+  "BROWSE_TRANSACTION_API": "/api/v1/transactions",
+  "TOKENS": {
+    "public": "SamplePublicTestKey1",
+    "private": "SamplePrivateTestKey1"
+  },
+  "TOKEN": {
+    "private": {
+      "name": "private token",
+      "header": {
+        "Private-Token": "SamplePrivateTestKey1"
+      },
+      "data": {
+        "private_token": "SamplePrivateTestKey1"
+      },
+      "query": "private_token=SamplePrivateTestKey1"
+    },
+    "public": {
+      "name": "public token",
+      "header": {
+        "Public-Token": "SamplePublicTestKey1"
+      },
+      "data": {
+        "public_token": "SamplePublicTestKey1"
+      },
+      "query": "public_token=SamplePublicTestKey1"
+    }
+  },
+  "DEBUG": false
+}

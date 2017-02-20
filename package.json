@@ -1,0 +1,28 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "API tests for Taxamo Transaction API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/learn-nightwatch.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "chakram": "^1.5.0"
+  },
+  "devDependencies": {
+    "chakram": "^1.5.0",
+    "mocha": "^3.2.0",
+    "mochawesome": "^2.0.3"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./tests/*.js --reporter mochawesome"
+  },
+  "keywords": [
+    "chakram",
+    "api",
+    "test"
+  ],
+  "author": "Volodymyr Borodavchuk",
+  "license": "ISC"
+}

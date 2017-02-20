@@ -1,0 +1,535 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "transaction": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "integer"
+        },
+        "buyer_credit_card_prefix": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "tax_amount": {
+          "type": "integer"
+        },
+        "tax_deducted": {
+          "type": "boolean"
+        },
+        "tax_region": {
+          "type": "string"
+        },
+        "billing_country_code": {
+          "type": "string"
+        },
+        "merchant_id": {
+          "type": "integer"
+        },
+        "evidence": {
+          "type": "object",
+          "properties": {
+            "by_ip": {
+              "type": "object",
+              "properties": {
+                "evidence_value": {
+                  "type": "string"
+                },
+                "used": {
+                  "type": "boolean"
+                },
+                "resolved_country_code": {
+                  "type": "string"
+                },
+                "evidence_type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+   
+              ]
+            },
+            "by_cc": {
+              "type": "object",
+              "properties": {
+                "evidence_value": {
+                  "type": "string"
+                },
+                "used": {
+                  "type": "boolean"
+                },
+                "resolved_country_code": {
+                  "type": "string"
+                },
+                "evidence_type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+
+              ]
+            },
+            "by_billing": {
+              "type": "object",
+              "properties": {
+                "evidence_value": {
+                  "type": "string"
+                },
+                "used": {
+                  "type": "boolean"
+                },
+                "resolved_country_code": {
+                  "type": "string"
+                },
+                "evidence_type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+
+              ]
+            }
+          },
+          "required": [
+
+          ]
+        },
+        "invoice_place": {
+          "type": "string"
+        },
+        "create_timestamp": {
+          "type": "string"
+        },
+        "tax_country_code": {
+          "type": "string"
+        },
+        "countries": {
+          "type": "object",
+          "properties": {
+            "by_cc": {
+              "type": "object",
+              "properties": {
+                "code_long": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "cca2": {
+                  "type": "string"
+                },
+                "tax_region": {
+                  "type": "string"
+                },
+                "codenum": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "code": {
+                  "type": "string"
+                },
+                "cca3": {
+                  "type": "string"
+                },
+                "callingCode": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tax_number_country_code": {
+                  "type": "string"
+                },
+                "tax_supported": {
+                  "type": "boolean"
+                },
+                "ccn3": {
+                  "type": "string"
+                }
+              },
+              "required": [
+
+              ]
+            },
+            "by_ip": {
+              "type": "object",
+              "properties": {
+                "code_long": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "cca2": {
+                  "type": "string"
+                },
+                "tax_region": {
+                  "type": "string"
+                },
+                "codenum": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "code": {
+                  "type": "string"
+                },
+                "cca3": {
+                  "type": "string"
+                },
+                "callingCode": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tax_number_country_code": {
+                  "type": "string"
+                },
+                "tax_supported": {
+                  "type": "boolean"
+                },
+                "ccn3": {
+                  "type": "string"
+                }
+              },
+              "required": [
+
+              ]
+            },
+            "by_billing": {
+              "type": "object",
+              "properties": {
+                "code_long": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "cca2": {
+                  "type": "string"
+                },
+                "tax_region": {
+                  "type": "string"
+                },
+                "codenum": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "code": {
+                  "type": "string"
+                },
+                "cca3": {
+                  "type": "string"
+                },
+                "callingCode": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tax_number_country_code": {
+                  "type": "string"
+                },
+                "tax_supported": {
+                  "type": "boolean"
+                },
+                "ccn3": {
+                  "type": "string"
+                }
+              },
+              "required": [
+
+              ]
+            },
+            "by_payment_method": {
+              "type": "object",
+              "properties": {
+                "code_long": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "cca2": {
+                  "type": "string"
+                },
+                "tax_region": {
+                  "type": "string"
+                },
+                "codenum": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "code": {
+                  "type": "string"
+                },
+                "cca3": {
+                  "type": "string"
+                },
+                "callingCode": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tax_number_country_code": {
+                  "type": "string"
+                },
+                "tax_supported": {
+                  "type": "boolean"
+                },
+                "ccn3": {
+                  "type": "string"
+                }
+              },
+              "required": [
+
+              ]
+            },
+            "detected": {
+              "type": "object",
+              "properties": {
+                "code_long": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "cca2": {
+                  "type": "string"
+                },
+                "tax_region": {
+                  "type": "string"
+                },
+                "codenum": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "code": {
+                  "type": "string"
+                },
+                "cca3": {
+                  "type": "string"
+                },
+                "callingCode": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tax_number_country_code": {
+                  "type": "string"
+                },
+                "tax_supported": {
+                  "type": "boolean"
+                },
+                "ccn3": {
+                  "type": "string"
+                }
+              },
+              "required": [
+
+              ]
+            }
+          },
+          "required": [
+
+          ]
+        },
+        "transaction_lines": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "integer"
+              },
+              "unit_price": {
+                "type": "integer"
+              },
+              "tax_amount": {
+                "type": "integer"
+              },
+              "tax_rate": {
+                "type": "integer"
+              },
+              "line_key": {
+                "type": "string"
+              },
+              "custom_id": {
+                "type": "string"
+              },
+              "tax_name": {
+                "type": "string"
+              },
+              "line_num": {
+                "type": "integer"
+              },
+              "deducted_tax_amount": {
+                "type": "integer"
+              },
+              "quantity": {
+                "type": "integer"
+              },
+              "total_amount": {
+                "type": "integer"
+              },
+              "deducted_tax_rate": {
+                "type": "integer"
+              }
+            },
+            
+            "required": [
+              "amount",
+              "unit_price",
+              "tax_amount",
+              "tax_rate",
+              "line_key",
+              "custom_id",
+              "tax_name",
+              "line_num",
+              "deducted_tax_amount",
+              "quantity",
+              "total_amount",
+              "deducted_tax_rate"
+            ]
+          }
+        },
+        "buyer_ip": {
+          "type": "string"
+        },
+        "manual": {
+          "type": "boolean"
+        },
+        "country_name": {
+          "type": "string"
+        },
+        "fully_informative": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "tax_number_service": {
+          "type": "string"
+        },
+        "update_timestamp": {
+          "type": "integer"
+        },
+        "deducted_tax_amount": {
+          "type": "integer"
+        },
+        "order_date": {
+          "type": "string"
+        },
+        "invoice_capable": {
+          "type": "boolean"
+        },
+        "total_amount": {
+          "type": "integer"
+        },
+        "tax_timezone": {
+          "type": "string"
+        },
+        "test": {
+          "type": "boolean"
+        },
+        "tax_entity_id": {
+          "type": "integer"
+        },
+        "tax_entity_name": {
+          "type": "string"
+        },
+        "tax_supported": {
+          "type": "boolean"
+        },
+        "tax_location_id": {
+          "type": "integer"
+        },
+        "currency_code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "buyer_credit_card_prefix",
+        "key",
+        "tax_amount",
+        "tax_deducted",
+        "billing_country_code",
+        "merchant_id",
+        "evidence",
+        "invoice_place",
+        "create_timestamp",
+        "tax_country_code",
+        "countries",
+        "transaction_lines",
+        "buyer_ip",
+        "manual",
+        "country_name",
+        "fully_informative",
+        "status",
+        "kind",
+        "tax_number_service",
+        "update_timestamp",
+        "deducted_tax_amount",
+        "order_date",
+        "invoice_capable",
+        "total_amount",
+        "tax_timezone",
+        "test",
+        "tax_entity_id",
+        "tax_entity_name",
+        "tax_supported",
+        "tax_location_id",
+        "currency_code"
+      ]
+    },
+    "tax_required_fields": {
+      "type": "array",
+      "items": {}
+    },
+    "storage_required_fields": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "transaction",
+    "tax_required_fields",
+    "storage_required_fields"
+  ]
+}

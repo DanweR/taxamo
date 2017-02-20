@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "nickname": {
+      "type": "string"
+    },
+    "validation_failures": {
+      "type": "object"
+    },
+    "required": [
+      "errors"
+    ]
+  }
+}
