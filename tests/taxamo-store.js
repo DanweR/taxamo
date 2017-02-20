@@ -294,9 +294,10 @@ describe("Taxamo API", function() {
 							custom_id: "line1"
 						}
 						]
-					},
-					private_token: tokens.private
+					}
 				};
+				newData = Object.assign(newData,token.private.data);
+
 				var updatedResponse = chakram.put(urlPut.replace('{key}',transactionJson.key),newData);
 				expect(updatedResponse).to.have.status(200);
 				expect(updatedResponse).to.have.json('transaction', function(transaction){
@@ -319,9 +320,9 @@ describe("Taxamo API", function() {
 				var newData = {
 					transaction: {
 						tax_amount: 200
-					},
-					private_token: tokens.private
+					}
 				};
+				newData = Object.assign(newData,token.private.data);
 				var updatedResponse = chakram.put(urlPut.replace('{key}',transactionJson.key),newData);
 				expect(updatedResponse).to.have.schema(errorsSchema);
 				expect(updatedResponse).to.have.status(400);
@@ -336,9 +337,9 @@ describe("Taxamo API", function() {
 				var newData = {
 					transaction: {
 						status: "C"
-					},
-					private_token: tokens.private
+					}
 				};
+				newData = Object.assign(newData,token.private.data);
 				var updatedResponse = chakram.put(urlPut.replace('{key}',transactionJson.key),newData);
 				expect(updatedResponse).to.have.status(200);
 				expect(updatedResponse).to.have.json('transaction', function(transaction){
