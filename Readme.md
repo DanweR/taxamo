@@ -38,3 +38,12 @@ npm install
 npm test
 ```
 
+## Request/Response loggin
+
+### To enable loggin set property **"DEBUG": true** in _config.json_ file. (false by default):
+
+```json
+{
+"DEBUG": true
+}
+```

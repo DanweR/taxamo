@@ -29,8 +29,6 @@ const transaction = function () {
 
 describe("Taxamo API", function() {
 	
-	var tokenPublic = tokens.public;
-	
 	var data = transaction();
 	data = Object.assign(data,token.private.data);
 
@@ -165,6 +163,31 @@ describe("Taxamo API", function() {
 		Authentication(token.private);
 		Authentication(token.public);
 
+		it("should require token", function () {
+			var newData = transaction();
+
+			return chakram.post(url,newData).then(function (response) {
+				expect(response).to.have.status(401);
+				expect(response).to.have.schema(errorsSchema);
+				expect(response).to.have.json('errors[0]','Please provide correct public token.');
+				return chakram.wait();
+			});
+		});
+
+		var AuthError = function (token) {
+			it("should not accept invalid " + token.name, function () {
+					var newData = transaction();
+		
+					return chakram.post(url + '?' + token.query + '2',newData).then(function (response) {
+						expect(response).to.have.status(401);
+						expect(response).to.have.schema(errorsSchema);
+						expect(response).to.have.json('errors[0]','Please provide correct {token}.'.replace('{token}', token.name));
+						return chakram.wait();
+					});
+				});
+		};
+		AuthError(token.private);
+		AuthError(token.public);
 	});
 
 
